@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplexServiceLibrary", "DuplexServiceLibrary\DuplexServiceLibrary.csproj", "{F4754FC0-D9D3-4BA2-B9C2-FC5AD804CD75}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplexServiceHost", "DuplexServiceHost\DuplexServiceHost.csproj", "{936F3C6E-889A-4F8F-A38C-F9269BA98ADF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuplexCalcProgram", "DuplexCalcProgram\DuplexCalcProgram.csproj", "{54A2E501-9072-4BF3-B3C4-E6D596A24ECB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4754FC0-D9D3-4BA2-B9C2-FC5AD804CD75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4754FC0-D9D3-4BA2-B9C2-FC5AD804CD75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4754FC0-D9D3-4BA2-B9C2-FC5AD804CD75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4754FC0-D9D3-4BA2-B9C2-FC5AD804CD75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{936F3C6E-889A-4F8F-A38C-F9269BA98ADF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{936F3C6E-889A-4F8F-A38C-F9269BA98ADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{936F3C6E-889A-4F8F-A38C-F9269BA98ADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{936F3C6E-889A-4F8F-A38C-F9269BA98ADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54A2E501-9072-4BF3-B3C4-E6D596A24ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54A2E501-9072-4BF3-B3C4-E6D596A24ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54A2E501-9072-4BF3-B3C4-E6D596A24ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54A2E501-9072-4BF3-B3C4-E6D596A24ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {76072712-250C-4AAB-9067-6B39BE4F1DDD}
+	EndGlobalSection
+EndGlobal
