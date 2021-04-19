@@ -9,7 +9,7 @@ using System.Timers;
 
 namespace DuplexServiceLibrary
 {
-    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession, ConcurrencyMode = ConcurrencyMode.Single)]
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.Single, ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class DuplexCalc : IDuplexCalc
     {
         double wynik = 0.0D;
@@ -51,25 +51,26 @@ namespace DuplexServiceLibrary
             rownanie += " / " + n.ToString();
             Callback.Wynik(wynik);
         }
-        internal void CounterThreadHandler()
+        internal void CounterThreadHandler(object callbackParam)
         {
+            IDuplexCalcCallback callback = (IDuplexCalcCallback)callbackParam;
             timer = new System.Timers.Timer(interval);
-            timer.Elapsed += TimerHandler;
+            timer.Elapsed += (source, e) => TimerHandler(source, e, callback);
             timer.AutoReset = true;
             timer.Enabled = true;
         }
-        internal void TimerHandler(Object source, ElapsedEventArgs e)
+        internal void TimerHandler(Object source, ElapsedEventArgs e, IDuplexCalcCallback callback)
         {
-            this.Callback.CounterIncrement();
+            callback.CounterIncrement();
         }
         public void InitCounterThread()
         {
-            counterThread = new Thread(new ThreadStart(CounterThreadHandler))
+            counterThread = new Thread(CounterThreadHandler)
             {
                 Name = "Counter thread",
                 IsBackground = false
             };
-            counterThread.Start();
+            counterThread.Start(Callback);
         }
         public void StopCounterThread()
         {
